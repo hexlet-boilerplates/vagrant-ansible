@@ -33,3 +33,46 @@ provenance = "github-attestations"
 checksum = "sha256:9f8c3480b8f0db553c270db548e8a21ae8e39df412e5661d66e8050c5c6ed2a8"
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.14.9+20261021-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
+
+[[tools.rumdl]]
+version = "0.3.0"
+backend = "aqua:rvben/rumdl"
+specifiers = ["latest"]
+
+[tools.rumdl."platforms.linux-arm64"]
+checksum = "sha256:b0ea55fdbabcc2b86e7ef594c3fd86cfee620844c2d8cea4a3135b9468d2845c"
+url = "https://github.com/rvben/rumdl/releases/download/v0.3.0/rumdl-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/rvben/rumdl/releases/assets/649870478"
+provenance = "github-attestations"
+
+[tools.rumdl."platforms.linux-x64"]
+checksum = "sha256:1d23c7f8c10d534e53c76b34a22f7dea7f5e5ebe493adbb7e25a401f88620c87"
+url = "https://github.com/rvben/rumdl/releases/download/v0.3.0/rumdl-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/rvben/rumdl/releases/assets/649870483"
+provenance = "github-attestations"
+
+[tools.rumdl."platforms.macos-arm64"]
+checksum = "sha256:bc62f4176dd9257547c939fa152b535b6f393365acd352fcfd94e5e19a792bb4"
+url = "https://github.com/rvben/rumdl/releases/download/v0.3.0/rumdl-v0.3.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/rvben/rumdl/releases/assets/649870474"
+provenance = "github-attestations"
+
+[[tools.typos]]
+version = "1.51.1"
+backend = "aqua:crate-ci/typos"
+specifiers = ["latest"]
+
+[tools.typos."platforms.linux-arm64"]
+checksum = "sha256:2ac5e37b3236b3c07dec5cdf1527acf143aec4674a6089b0bf424d021b35e099"
+url = "https://github.com/crate-ci/typos/releases/download/v1.51.1/typos-v1.51.1-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/crate-ci/typos/releases/assets/616652747"
+
+[tools.typos."platforms.linux-x64"]
+checksum = "sha256:93c301fd4120ff076e2cc2a6d6a61cab4a4bdb81899287c0938b452e56d1f454"
+url = "https://github.com/crate-ci/typos/releases/download/v1.51.1/typos-v1.51.1-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/crate-ci/typos/releases/assets/616653682"
+
+[tools.typos."platforms.macos-arm64"]
+checksum = "sha256:316d50a32c3726a80ab39c6d12141b70080498973c5e8a9b068b12cde78b10c1"
+url = "https://github.com/crate-ci/typos/releases/download/v1.51.1/typos-v1.51.1-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/crate-ci/typos/releases/assets/616656668"
