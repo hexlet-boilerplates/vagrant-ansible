@@ -15,5 +15,6 @@ lint: deps
 	ansible-lint cm/vagrant.yml
 	rumdl check .
 	typos
+	jactionlint
 
 .PHONY: install deps provision lint
