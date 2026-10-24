@@ -2,6 +2,7 @@
 [tools]
 # ansible-core поддерживает Python только до 3.14
 python = "3.14"
+uv = "latest"
 "pipx:ansible-core" = "latest"
 "pipx:ansible-lint" = "latest"
 rumdl = "latest"
