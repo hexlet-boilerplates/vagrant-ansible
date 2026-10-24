@@ -1,15 +1,22 @@
 ---
-
-- hosts: all
+- name: Configure the virtual machine
+  hosts: all
+  become: true
   tasks:
-    - block:
-      - name: generate locale
-        locale_gen:
-          name: en_US.UTF-8
-          state: present
-        tags: [locale]
+    - name: Generate locale
+      community.general.locale_gen:
+        name: en_US.UTF-8
+        state: present
+      tags: [locale]
 
-      - name: set locale
-        become: yes
-        shell: update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8
-        tags: [locale]
+    - name: Set locale
+      ansible.builtin.copy:
+        dest: /etc/default/locale
+        content: |
+          LC_ALL=en_US.UTF-8
+          LANG=en_US.UTF-8
+          LANGUAGE=en_US.UTF-8
+        owner: root
+        group: root
+        mode: "0644"
+      tags: [locale]
