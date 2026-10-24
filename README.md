@@ -1,6 +1,11 @@
 # vagrant-ansible
 
-### Install
+## Requirements
+
+- [mise](https://mise.jdx.dev): ставит ansible-core, ansible-lint и остальные инструменты из `mise.toml` (`mise install`)
+- [Vagrant](https://www.vagrantup.com) и провайдер виртуальных машин, например VirtualBox: mise их не ставит
+
+## Install
 
 ```sh
 vagrant up

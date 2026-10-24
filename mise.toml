@@ -1,0 +1,6 @@
+# Инструменты проекта. Версии latest, точные версии лежат в mise.lock.
+[tools]
+# ansible-core поддерживает Python только до 3.14
+python = "3.14"
+"pipx:ansible-core" = "latest"
+"pipx:ansible-lint" = "latest"
