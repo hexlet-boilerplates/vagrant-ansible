@@ -12,7 +12,7 @@ vagrant up
 vagrant ssh
 ```
 
-`make install` ставит роли Ansible и git-хуки через hk.
+`make install` ставит коллекции Ansible и git-хуки через hk.
 
 ## Lint
 

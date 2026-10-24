@@ -1,12 +1,12 @@
-# Коллекции и роли ставятся в tmp, он в .gitignore
+# Коллекции ставятся в tmp, он в .gitignore
 export ANSIBLE_COLLECTIONS_PATH := $(CURDIR)/tmp/ansible-collections
 
 install: deps
 	mise exec -- hk install --mise
 
-# Роли ставятся отдельно от хуков, чтобы lint не трогал git-конфиг
+# Коллекции ставятся отдельно от хуков, чтобы lint не трогал git-конфиг
 deps:
-	ansible-galaxy install --role-file=cm/requirements.yml --roles-path=tmp/ansible-roles
+	ansible-galaxy collection install --requirements-file=cm/requirements.yml
 
 provision:
 	ansible-playbook cm/vagrant.yml -i 'localhost, ' -c local -vv

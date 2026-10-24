@@ -24,7 +24,7 @@ jobs:
       # Ставит инструменты из mise.toml
       # https://github.com/jdx/mise-action
       - uses: jdx/mise-action@v5
-      - name: Install roles and hooks
+      - name: Install collections and hooks
         run: make install
       - name: Run checks
         run: mise exec -- hk check --all
