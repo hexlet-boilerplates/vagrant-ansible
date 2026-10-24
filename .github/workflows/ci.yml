@@ -24,6 +24,12 @@ jobs:
       # Ставит инструменты из mise.toml
       # https://github.com/jdx/mise-action
       - uses: jdx/mise-action@v5
+      # Коллекции из Galaxy кэшируются, чтобы сбой galaxy.ansible.com не ронял каждый прогон
+      # https://github.com/actions/cache
+      - uses: actions/cache@v6
+        with:
+          path: tmp/ansible-collections
+          key: ansible-collections-${{ hashFiles('cm/requirements.yml') }}
       - name: Install collections and hooks
         run: make install
       - name: Run checks
