@@ -12,6 +12,8 @@ vagrant up
 vagrant ssh
 ```
 
+`make install` ставит роли Ansible и git-хуки через hk.
+
 ## Lint
 
 ```sh
